@@ -23,7 +23,7 @@ Ejecuta:
     python manage.py shell
 ```
 
-    y
+y
 
 from HospitalApp.models import Usuario, Paciente, Doctor
 

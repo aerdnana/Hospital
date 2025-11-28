@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Mis citas</h2>
+
+<a href="{% url 'paciente_crear_cita' %}" class="btn btn-success mb-3">
+    Nueva cita
+</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Doctor</th>
+            <th>Fecha y hora</th>
+            <th>Estado</th>
+            <th>Motivo</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for c in citas %}
+        <tr>
+            <td>{{ c.doctor }}</td>
+            <td>{{ c.fecha_hora }}</td>
+            <td><span class="badge bg-info">{{ c.estado }}</span></td>
+            <td>{{ c.motivo }}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="4" class="text-center text-muted">No tienes citas.</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

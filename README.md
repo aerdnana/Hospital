@@ -25,19 +25,18 @@ Ejecuta:
 
 y
 
+```bash
 from HospitalApp.models import Usuario, Paciente, Doctor
 
-# Paciente
+Paciente
 u = Usuario.objects.create_user("paciente1", password="123", rol="paciente")
 Paciente.objects.create(usuario=u)
-
-# Doctor
+Doctor
 d = Usuario.objects.create_user("doctor1", password="123", rol="doctor")
 Doctor.objects.create(usuario=d)
-
-# RRHH
+RRHH
 r = Usuario.objects.create_user("rrhh1", password="123", rol="rrhh")
-
+```
 
 
 Funcionalidades principales
